@@ -43,14 +43,29 @@ def writeData(value): #save value string to a log file nRata+today.log
     with  open("/Personal/Deberes/U/Magister/A2012S02/Tesis/Data/"+nRata+"."+today+".log","a+") as f:
         f.write(value)
         f.write("\n")
+	f.close()
         print value
 
 
 while True:
+ try:
   if ser.inWaiting() > 0: # if data present in serial
         value = ser.readline() # Read the data from serial 
         if value == 'End of Expe\r\n':
+	  ser.setDTR( level=False)
+	  ser.flushInput()
+	  ser.setDTR( level=True)
+	  ser.close()
           break
         else:
           value = value.strip('\r\n') #take the eol
           writeData(value)
+
+ except KeyboardInterrupt:
+        print '\n Salida Forzada'
+        ser.setDTR( level=False)
+        ser.flushInput()
+        ser.setDTR( level=True)
+        ser.close()
+        break
+
