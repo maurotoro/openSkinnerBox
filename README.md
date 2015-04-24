@@ -43,4 +43,4 @@ Suerte!
 
 SoyUnKoPe 2013
 
-PS: The references added are probably not legaly, if that's bad please tell me and I will rm them. 
+PS: The references added are probably not legal, if that's bad please tell me and I will rm them. 
