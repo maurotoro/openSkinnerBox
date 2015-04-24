@@ -42,3 +42,5 @@ Keep in mind that all of this is part of my Ms thesis, so really any help will h
 Suerte!
 
 SoyUnKoPe 2013
+
+PS: The references added are probably not legaly, if that's bad please tell me and I will rm them. 
